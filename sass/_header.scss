@@ -1,0 +1,117 @@
+@use "variables";
+
+header{
+  overflow: hidden;
+  background-image:url("/images/bg-pattern-intro-desktop.svg"), linear-gradient(to right,variables.$bg-nav, variables.$bg-nav1);
+  background-position: right;
+  background-repeat: no-repeat;
+  border-bottom-left-radius: 80px;
+
+  nav{
+    margin: 60px auto;
+    width: 850px;
+    display: flex;
+
+    .logo{
+      margin-right: 30px;
+      width: 105px;
+    }
+
+    .links{
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      details{
+        margin-left: 30px;
+        color: white;
+        cursor: pointer;
+
+        a{
+          display: block;
+          width: 170px;
+          background-color: white;
+          padding: 10px 25px;
+          position: absolute;
+        }
+
+        a:nth-child(2){
+          top: 50px;
+        }
+
+        a:nth-child(3){
+          top: 80px;
+        }
+
+        a:nth-child(4){
+          top: 110px;
+        }
+
+        a:nth-child(5){
+          top: 140px;
+        }
+
+        a:nth-child(6){
+          top: 170px;
+        }
+      }
+    }
+
+    .buttons{
+      display: flex;
+      flex: 1;
+      justify-content: flex-end;
+      align-items: center;
+      gap:26px;
+      width: 100%;
+
+      .login{
+        color: white;
+        font-weight: 600;
+      }
+
+      .sign{
+        color: variables.$bg-nav1;
+        background-color: white;
+        padding-inline: 40px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        border-radius: 80px;
+        font-weight: 800;
+      }
+    }
+  }
+
+  .content{
+    text-align: center;
+    margin-top: 140px;
+    margin-bottom: 155px;
+
+    h1{
+      margin-bottom: 20px;
+    }
+
+    h5{
+      color: aliceblue;
+      margin-bottom: 50px;
+    }
+
+    a{
+      padding: 15px 20px;
+      border-radius: 50px;
+      font-weight: 700;
+
+      &.free{
+        background-color: white;
+        color: variables.$bg-nav1;
+        margin-right: 16px;
+      }
+
+      &.more{
+        background-color: transparent;
+        color: white;
+        border: 1px solid white;
+      }
+    }
+  }
+}

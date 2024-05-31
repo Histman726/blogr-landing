@@ -34,3 +34,21 @@ footer{
     }
   }
 }
+
+@media (width<376px) {
+  footer{
+    .content{
+      width: 325px;
+      flex-direction: column;
+      align-items: center;
+
+      section:first-child{
+        margin-bottom: 70px;
+      }
+
+      section{
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

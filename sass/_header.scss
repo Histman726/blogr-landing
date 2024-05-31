@@ -17,6 +17,14 @@ header{
       width: 105px;
     }
 
+    .menu{
+      display: flex;
+    }
+
+    .hamburger{
+      display: none;
+    }
+
     .links{
       display: flex;
       align-items: center;
@@ -27,12 +35,20 @@ header{
         color: white;
         cursor: pointer;
 
+        summary:hover{
+          text-decoration: underline white;
+        }
+
         a{
           display: block;
           width: 170px;
           background-color: white;
           padding: 10px 25px;
           position: absolute;
+
+          &:hover{
+            font-weight: bold;
+          }
         }
 
         a:nth-child(2){
@@ -112,6 +128,36 @@ header{
         color: white;
         border: 1px solid white;
       }
+    }
+  }
+}
+
+@media (width<376px) {
+  header{
+    nav{
+      gap: 140px;
+
+      .logo{
+        margin-left: 20px;
+      }
+
+      .menu, .buttons{
+        display: none;
+      }
+
+      .hamburger{
+        display: block;
+        width: 40px;
+        cursor: pointer;
+      }
+    }
+
+    h1{
+      font-size: 30px;
+    }
+
+    h5{
+      font-size: 18px;
     }
   }
 }

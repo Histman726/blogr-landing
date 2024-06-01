@@ -134,6 +134,8 @@ header{
 
 @media (width<376px) {
   header{
+    position: relative;
+
     nav{
       gap: 140px;
 
@@ -142,7 +144,53 @@ header{
       }
 
       .menu, .buttons{
-        display: none;
+        display: flex; // display none
+        position: absolute;
+      }
+
+      .menu{
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        top: 50px;
+        left: 10px;
+        background-color: white;
+        box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+        width: 325px;
+        height: 550px;
+
+        details{
+          color: variables.$very-dark-black-blue;
+          margin-left: 0;
+
+          a{
+            position: static;
+          }
+
+          summary{
+            margin-top: 40px;
+          }
+        }
+      }
+
+      hr{
+        color: variables.$very-dark-grayish-blue;
+        width: 275px;
+      }
+
+      .buttons{
+        flex-direction: column;
+        gap: 10px;
+        top: 500px;
+
+        .login{
+          color: variables.$very-dark-black-blue;
+        }
+
+        .sign{
+          color: white;
+          background-color: variables.$bg-nav1;
+        }
       }
 
       .hamburger{

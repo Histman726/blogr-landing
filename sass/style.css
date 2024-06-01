@@ -109,6 +109,9 @@ header .content a.more {
 }
 
 @media (width < 376px) {
+  header {
+    position: relative;
+  }
   header nav {
     gap: 140px;
   }
@@ -116,7 +119,45 @@ header .content a.more {
     margin-left: 20px;
   }
   header nav .menu, header nav .buttons {
-    display: none;
+    display: flex;
+    position: absolute;
+  }
+  header nav .menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    top: 50px;
+    left: 10px;
+    background-color: white;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+    width: 325px;
+    height: 550px;
+  }
+  header nav .menu details {
+    color: hsl(240, 10%, 16%);
+    margin-left: 0;
+  }
+  header nav .menu details a {
+    position: static;
+  }
+  header nav .menu details summary {
+    margin-top: 40px;
+  }
+  header nav hr {
+    color: hsl(207, 13%, 34%);
+    width: 275px;
+  }
+  header nav .buttons {
+    flex-direction: column;
+    gap: 10px;
+    top: 500px;
+  }
+  header nav .buttons .login {
+    color: hsl(240, 10%, 16%);
+  }
+  header nav .buttons .sign {
+    color: white;
+    background-color: hsl(353, 100%, 62%);
   }
   header nav .hamburger {
     display: block;

@@ -19,6 +19,10 @@ header{
 
     .menu{
       display: flex;
+
+      hr{
+        display: none;
+      }
     }
 
     .hamburger{
@@ -144,8 +148,12 @@ header{
       }
 
       .menu, .buttons{
-        display: flex; // display none
+        display: none;
         position: absolute;
+      }
+
+      .active{
+        display: flex;
       }
 
       .menu{
@@ -170,6 +178,10 @@ header{
           summary{
             margin-top: 40px;
           }
+        }
+
+        .visible{
+          display: block;
         }
       }
 

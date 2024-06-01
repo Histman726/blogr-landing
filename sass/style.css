@@ -18,6 +18,9 @@ header nav .logo {
 header nav .menu {
   display: flex;
 }
+header nav .menu hr {
+  display: none;
+}
 header nav .hamburger {
   display: none;
 }
@@ -119,8 +122,11 @@ header .content a.more {
     margin-left: 20px;
   }
   header nav .menu, header nav .buttons {
-    display: flex;
+    display: none;
     position: absolute;
+  }
+  header nav .active {
+    display: flex;
   }
   header nav .menu {
     flex-direction: column;
@@ -142,6 +148,9 @@ header .content a.more {
   }
   header nav .menu details summary {
     margin-top: 40px;
+  }
+  header nav .menu .visible {
+    display: block;
   }
   header nav hr {
     color: hsl(207, 13%, 34%);
